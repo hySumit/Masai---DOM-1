@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <style>
+        #Screen{
+           display: flex;
+           margin-top: 10%;
+           justify-content: center;
+        }
+        #Screen>input{
+            margin: 0.3%;
+        }
+        .submit{
+            display: flex;
+            justify-content: center;
+        }
+        .submit>button{
+            margin: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div id="Screen">
+        <input type="number" id="1st" placeholder="enter 1st number">
+
+        <input type="number" id="2nd" placeholder="enter 2nd Number">
+
+        <!-- <button></button> -->
+    </div>
+    <div class="submit">
+        <button onclick="add()">Add</button>
+        <button onclick="sub()" >Subtract</button>
+        <button onclick="multiply()" >Multiply</button>
+        <button onclick="divide()" >Divide</button>
+    </div>
+
+</body>
+<script>
+    // Addition>>>>>>>>>
+    function add(){
+    let num1 = document.getElementById("1st").value
+    let num2 = document.getElementById("2nd").value
+    let ans = Number(num1) + Number(num2) 
+    alert(ans)
+    }
+    // Subtraction>>>>>>>>>
+
+    function sub(){
+        let numA = document.getElementById("1st").value
+        let numB = document.getElementById("2nd").value
+        let ansa = numA - numB
+        alert(ansa)
+    }
+    // Multiply>>>>>>>>>>>
+
+    function multiply(){
+        let numC = document.getElementById("1st").value
+        let numD = document.getElementById("2nd").value
+        let ansb = numC * numD
+        alert(ansb)
+    }
+
+    // Divide>>>>>>>>>>>>>>
+
+    function divide (){
+        let numE = document.getElementById("1st").value 
+        let numF = document.getElementById("2nd").value
+        let ansc = numE / numF
+        alert(ansc)
+    }
+</script>
+</html>
